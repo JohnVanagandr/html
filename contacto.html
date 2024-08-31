@@ -26,7 +26,7 @@
 
         <!-- Formulario de contacto -->
 
-        <form action="index.html" method="get">
+        <form action="index.html" method="get" enctype="multipart/form-data" novalidate autocomplete="off">
             <div>
             <label for="nombre">Nombre...</label>
             <input 
@@ -35,7 +35,8 @@
             placeholder="Ingrese su nombre" 
             pattern="^[0-9]*$"
             required
-            id="nombre">
+            id="nombre"
+            autocomplete="off">
         </div>
         <div>
             <input type="number" name="cantidad" step="0.5">
@@ -71,6 +72,24 @@
                 <input type="radio" name="genero" id="otro">
             </div>
         </div>
+        <div>
+            <label for="cuidad">Ciudades</label>
+            <select name="ciudad" id="cuidad">
+                <option value="bucaramanga">Bucaramanga</option>
+                <option value="bogota">Bogota</option>
+                <option value="cali">Cali</option>
+                <option value="medellin">Medellin</option>
+            </select>
+        </div>
+        <br>
+        <br>
+        <input type="date">
+        <br>
+        <br>
+        <div>
+            <input type="file" name="file" id="file">
+        </div>
+        <textarea name="mensaje" id="mensaje" rows="6"></textarea>
             <button>Enviar</button>
         </form>
 
